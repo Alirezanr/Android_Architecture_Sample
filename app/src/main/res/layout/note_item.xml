@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dimen_8dp"
+    android:layout_marginTop="@dimen/dimen_8dp"
+    android:layout_marginEnd="@dimen/dimen_8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_margin="2dp"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_weight="0.9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_8dp">
+
+            <TextView
+                android:id="@+id/tv_priority"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                tools:text="1" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:layout_toStartOf="@+id/tv_priority"/>
+
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_title"
+                android:textSize="16sp"
+                tools:text="description" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_weight="0.1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ic_delete_sweep" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
